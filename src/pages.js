@@ -62,7 +62,7 @@ async function pageStudy(req, res){
 
 function pageGiveClasses(req, res){
     
-    return res.render("give-classes.html"), {subjects, weekday};
+    return res.render("give-classes.html", {subjects, weekday});
 }
 
 async function saveClasses(req, res){
@@ -105,6 +105,8 @@ async function saveClasses(req, res){
         }
     }
 
+function sucess(req, res){
+       return  res.render("sucess.html")
+}
 
-
-module.exports = {pageLanding, pageStudy, pageGiveClasses, saveClasses}
+module.exports = {pageLanding, pageStudy, pageGiveClasses, saveClasses,sucess}

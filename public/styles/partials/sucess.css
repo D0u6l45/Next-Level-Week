@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#sucess{
+    background : var(--color-primary-dark );
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+#sucess #container{
+    background: url("/images/success-background.svg");
+    width: 100% ;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+#container .title{
+    text-align: center;
+    
+}
+
+#container .title h1{
+    color: var(--color-title-in-primary);
+    font: 700 4rem Archivo;
+    padding-bottom: 3rem;
+}
+
+
+#container .title p{
+
+    color:var(--color-title-in-primary) ;
+    font:700 1.8rem Archivo;
+    line-height: 2.3rem;
+
+}
