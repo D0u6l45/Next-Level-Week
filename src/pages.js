@@ -5,13 +5,20 @@ const Database = require('./databases/db')
 
 const {getSubject,weekday,subjects, convertHoursToMinutes} = require('./utils/format')
 
-
+let cont = 0
 
  function pageLanding(req, res){
-    return res.render("index.html");
+    cont += 1
+    let result = cont
+    
+    return res.render("index.html", {result});
+   
 }
 async function pageStudy(req, res){
     const filters = req.query
+
+    
+
 
 
     if (!filters.subject || !filters.weekday || !filters.time) {
@@ -65,6 +72,9 @@ function pageGiveClasses(req, res){
     return res.render("give-classes.html", {subjects, weekday});
 }
 
+
+
+
 async function saveClasses(req, res){
         const createProffy = require('./databases/createProffy')
         
@@ -99,7 +109,14 @@ async function saveClasses(req, res){
             
 
         // const data = req.body
-        return res.redirect("/study" + queryString)
+
+        res.redirect("/sucess")
+
+        // res.redirect("/study" + queryString)
+        
+
+
+        
         }catch(error){
             console.log(error)
         }
